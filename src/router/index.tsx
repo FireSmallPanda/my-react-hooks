@@ -3,13 +3,13 @@ import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import HomePage from '@/page/admin';
 import User from '@/page/user/User';
-import Index from '@/page/index/Index';
+import Base from '@/page/index/base';
 const RouterPage = () => {
 	return (
 		<HashRouter>
 			<Switch>
-				<Route path={'/'} component={Index} />
-				<Route path={'/admin'} reac component={HomePage} />
+				<Route path={'/'} component={Base} />
+				<Route path={'/admin'} exact component={HomePage} />
 				<Route path={'/user'} component={User} />
 			</Switch>
 			{/* <HomePage>
